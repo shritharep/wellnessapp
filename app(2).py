@@ -1,7 +1,8 @@
 import streamlit as st
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyA1NB_L9JPV9w_X5EfrsXxa_599w1qXJg8")
+
+genai.configure(api_key=st.secrets["APIKEY"])
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 st.title("Personalized Diet & Fitness Planner")
